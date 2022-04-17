@@ -14,3 +14,4 @@ kernel
 kernelmemfs
 mkfs
 .gdbinit
+.vscode/c_cpp_properties.json
