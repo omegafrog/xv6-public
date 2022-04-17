@@ -544,9 +544,7 @@ void procdump(void)
 }
 void getptable(struct proc *p)
 {
-  cprintf("%x\n", p);
   acquire(&ptable.lock); // DOC: yieldlock
   memmove(p, ptable.proc, sizeof(struct proc) * NPROC);
   release(&ptable.lock);
-  cprintf("%x\n", p);
 }

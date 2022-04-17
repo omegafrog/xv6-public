@@ -89,8 +89,6 @@ int sys_getptable(void)
   struct proc *p;
 
   argptr(0, (void *)&p, sizeof(p));
-  cprintf("%x\n", p);
   getptable(p);
-  cprintf("%s\n", p[0].name);
   return 0;
 }
